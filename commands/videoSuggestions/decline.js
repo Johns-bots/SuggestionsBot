@@ -17,9 +17,9 @@ module.exports = class extends Command {
     async run(message, args) {
 
         let channel;
-        if(config.suggestion_channel_id){
-          channel = await message.guild.channels.cache.get(config.suggestion_channel_id)
-        } else channel = await message.guild.channels.cache.find(c => c.name == "suggestions" && c.type == "text");
+        if(config.video_channel_id){
+          channel = await message.guild.channels.cache.get(config.video_channel_id)
+        } else channel = await message.guild.channels.cache.find(c => c.name == "📹︱video-ideas" && c.type == "text");
   
         if(!channel){
         return message.channel.send(`${message.client.emoji.fail} | I could not find the suggestion channel in the current guild.`)
