@@ -16,6 +16,8 @@ module.exports = class extends Command {
 
     async run(message, args) {
 
+      console.log(`Discord Suggestion Ran. From user ${message.author.tag}`)
+
       let channel;
       if(config.video_channel_id){
         channel = await message.guild.channels.cache.get(config.video_channel_id)
