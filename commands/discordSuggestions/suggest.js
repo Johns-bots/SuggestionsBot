@@ -5,9 +5,9 @@ const Discord = require('discord.js');
 module.exports = class extends Command {
     constructor(...args) {
       super(...args, {
-        name: 'suggest discord',
-        aliases: ["sd", "sugd"],
-        description: `Suggest anything for the discord!`,
+        name: 'suggest',
+        aliases: ["s", "sug","suggest"],
+        description: `Suggest anything!`,
         category: 'Suggestions',
         cooldown: 20,
         botPermission: ["ADD_REACTIONS"]
@@ -29,7 +29,7 @@ module.exports = class extends Command {
 
       const suggestion = args.slice(0).join(" ")
       if(!suggestion){
-        return message.channel.send(`${message.client.emoji.fail} | You need to type s!sug [Your suggestion]`)
+        return message.channel.send(`${message.client.emoji.fail} | You need to type !suggest [Your suggestion]`)
       };
 
       const embed = new Discord.MessageEmbed()
