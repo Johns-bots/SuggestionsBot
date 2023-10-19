@@ -176,7 +176,7 @@ module.exports = class extends Event {
         }
       } catch(e) {
         console.log(e)
-        message.channel.send(`An Error has occured, please let the developer know.`)
+        message.channel.send(`An Error has occured, please let <@630070645874622494> know.`)
       }
     }
 }
