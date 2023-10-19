@@ -15,11 +15,14 @@ Beem Suggestion Bot
 Add in the config.json file the following lines
 ``
 {
-    "prefix": "!",
-    "main_token": "token",
-    "developers": ["Your Discord ID"],
-    "bot_name":"bot name",
-    "discord_channel_id":"suggestion channel id"
+    "prefix": "Your prefix",
+    "main_token": "Your token",
+    "developers": ["Your discordID"],
+    "bot_name":"Suggestions", - Put anything
+    "suggestion_channel_id":"Channel you want the message to be sent in",
+    "bot_status": "dnd", You Can choose from: dnd, online, idle, offline 
+    "bot_status_name": "Suggesting", Change this to what ever you want
+    "bot_status_type": "LISTENING" You Can choose from: PLAYING, LISTENING, WATCHING, COMPETING, STREAMING 
   }
   ``
 
