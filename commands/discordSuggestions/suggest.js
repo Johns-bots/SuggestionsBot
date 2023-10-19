@@ -9,7 +9,7 @@ module.exports = class extends Command {
         aliases: ["s", "sug","suggest"],
         description: `Suggest anything!`,
         category: 'Suggestions',
-        cooldown: 20,
+        cooldown: 0,
         botPermission: ["ADD_REACTIONS"]
       });
     }
@@ -19,8 +19,8 @@ module.exports = class extends Command {
       console.log(`Discord Suggestion Ran. From user ${message.author.tag}`)
 
       let channel;
-      if(config.discord_channel_id){
-        channel = await message.guild.channels.cache.get(config.discord_channel_id)
+      if(config.suggestion_channel_id){
+        channel = await message.guild.channels.cache.get(config.suggestion_channel_id)
       } else channel = await message.guild.channels.cache.find(c => c.name == "suggestions" && c.type == "text");
 
       if(!channel){
@@ -41,8 +41,8 @@ module.exports = class extends Command {
       channel.send(embed)
       .then((s)=>{
 
-      s.react('✅')
-      s.react('❌')
+      s.react(`✅`)
+      s.react(`❌`)
 
       })
       .catch(()=>{
