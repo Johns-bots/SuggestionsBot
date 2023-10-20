@@ -15,7 +15,7 @@ Suggestion Bot
 # Create a config.json file
 
 Add in the config.json file the following lines
-``
+
 {
     "prefix": "Your prefix", 
     "main_token": "Your token",
@@ -27,7 +27,7 @@ Add in the config.json file the following lines
     "bot_status_type": "LISTENING", You Can choose from: PLAYING, LISTENING, WATCHING, COMPETING, STREAMING 
     "logChannelID": "Your Log Channel"
   }
-  ``
+  
 
 # Create .env file
 
