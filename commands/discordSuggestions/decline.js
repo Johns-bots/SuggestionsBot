@@ -71,7 +71,6 @@ module.exports = class extends Command {
 
         logChannel.send(log)
         suggestionmessage.edit(newEmbed);
-        suggestionmessage.reactions.removeAll();
         message.delete();
      
 

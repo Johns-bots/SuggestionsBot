@@ -1,5 +1,5 @@
 <h1 align="center">
-Beem Suggestion Bot
+Suggestion Bot
   <br>
 </h1>
 

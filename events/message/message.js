@@ -138,12 +138,12 @@ module.exports = class extends Event {
 
         .catch(error => {
            console.log(error)
-     return message.channel.send(`An Error has occured, please let the developer know.`)
+     return message.channel.send(`An Error has occured, please let <@${config.developers}> know.`)
         })
       }
     } catch(error) {
       console.log(error)
-     return message.channel.send(`An Error has occured, please let the developer know.`)
+     return message.channel.send(`An Error has occured, please let <@${config.developers}> know.`)
     }
   } 
 
@@ -176,7 +176,7 @@ module.exports = class extends Event {
         }
       } catch(e) {
         console.log(e)
-        message.channel.send(`An Error has occured, please let <@630070645874622494> know.`)
+        message.channel.send(`An Error has occured, please let <@${config.developers}> know.`)
       }
     }
 }
