@@ -40,6 +40,7 @@ module.exports = class extends Command {
       .setDescription(`**Submitter**\n ${message.author.tag} \n\n**Suggestion**\n ${suggestion}`)
       .setFooter(`Suggested by ${message.author.id}`)
       .setTimestamp()
+      .setColor(message.client.color.blue)
     
       channel.send(embed)
       .then((s)=>{
@@ -53,6 +54,7 @@ module.exports = class extends Command {
       .setDescription(`Suggestion sent by <@${message.author.id}> in <#${config.suggestion_channel_id}>\n ${suggestion}`)
       .setFooter(`Author: ${message.author.id} | Message ID: ${message.id}`)
       .setTimestamp()
+      .setColor(message.client.color.blue)
       logChannel.send(log)
 
       })

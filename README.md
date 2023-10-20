@@ -7,6 +7,8 @@ Beem Suggestion Bot
 ## Features
 
 `!suggest`: Suggests a suggestion <br>
+`!accept [messageID]` : Accepts a suggestion (Do not spam) <br>
+`!decline [messageID]` : Declines a suggestion (Do not spam) <br>
 
 ## Get Started
 
@@ -40,5 +42,5 @@ test your commands
 any errors make a pull request.
 
 ## To-Do's
-Fix the !accept and !deny commands
-Add a channel for logging with nice embeds
+Port to djs v14 with slash commands 
+Maybe add modals?
