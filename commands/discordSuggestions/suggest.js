@@ -64,12 +64,6 @@ module.exports = class extends Command {
       
       message.delete();
       return message.channel.send(`${message.client.emoji.success} | Successfuly sent your suggestion to ${channel}`)
-      .then((s)=>{
-        s.delete({timeout: 5000})
-      })
-
-
-
       }
 };
 
