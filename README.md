@@ -14,19 +14,11 @@ Suggestion Bot
 
 # Create a config.json file
 
-Add in the config.json file the following lines
+Add in the config.json file as it shows in image below
 
-{
-    "prefix": "Your prefix", 
-    "main_token": "Your token",
-    "developers": ["Your discordID"],
-    "bot_name":"Suggestions", - Put anything
-    "suggestion_channel_id":"Channel you want the message to be sent in",
-    "bot_status": "dnd", You Can choose from: dnd, online, idle, offline 
-    "bot_status_name": "Suggesting", Change this to what ever you want
-    "bot_status_type": "LISTENING", You Can choose from: PLAYING, LISTENING, WATCHING, COMPETING, STREAMING 
-    "logChannelID": "Your Log Channel"
-  }
+
+https://cdn.discordapp.com/attachments/1118868994078818385/1164759063406587905/image.png?ex=65446168&is=6531ec68&hm=c2974f3943db1b942dd91c4eb45473344f6114fb1c531924d2b2052f4f5e8874&
+
   
 
 # Create .env file
