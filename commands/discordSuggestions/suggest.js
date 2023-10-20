@@ -17,6 +17,9 @@ module.exports = class extends Command {
     async run(message, args) {
 
       console.log(`Discord Suggestion Ran. From user ${message.author.tag}`)
+      const channelId = `${config.logChannelID}`; 
+      const logChannel = message.guild.channels.cache.get(channelId);
+
 
       let channel;
       if(config.suggestion_channel_id){
@@ -44,6 +47,14 @@ module.exports = class extends Command {
       s.react(`✅`)
       s.react(`❌`)
 
+      const log = new Discord.MessageEmbed()
+      .setThumbnail(message.author.avatarURL())
+      .setAuthor(`${message.author.tag}`)
+      .setDescription(`Suggestion sent by <@${message.author.id}> in <#${config.suggestion_channel_id}>\n ${suggestion}`)
+      .setFooter(`Author: ${message.author.id} | Message ID: ${message.id}`)
+      .setTimestamp()
+      logChannel.send(log)
+
       })
       .catch(()=>{
         return message.reply(`${message.client.emoji.fail} | Could not send a message to the suggestion Channel.`)
@@ -54,6 +65,7 @@ module.exports = class extends Command {
       .then((s)=>{
         s.delete({timeout: 5000})
       })
+
 
 
       }

@@ -22,7 +22,8 @@ Add in the config.json file the following lines
     "suggestion_channel_id":"Channel you want the message to be sent in",
     "bot_status": "dnd", You Can choose from: dnd, online, idle, offline 
     "bot_status_name": "Suggesting", Change this to what ever you want
-    "bot_status_type": "LISTENING" You Can choose from: PLAYING, LISTENING, WATCHING, COMPETING, STREAMING 
+    "bot_status_type": "LISTENING", You Can choose from: PLAYING, LISTENING, WATCHING, COMPETING, STREAMING 
+    "logChannelID": "Your Log Channel"
   }
   ``
 
