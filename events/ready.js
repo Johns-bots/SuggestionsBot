@@ -9,9 +9,9 @@ module.exports = class extends Event {
 
     
     const activities = [
-      { name: `${config.bot_name || 'Matthew Beem'}`, type: 'WATCHING' }, 
+      { name: `${config.bot_status_name}`, type: `${config.bot_status_type}` }, 
     ];
-    this.client.user.setPresence({ status: 'online', activity: activities[0] });
+    this.client.user.setPresence({ status: `${config.bot_status}`, activity: activities[0] });
   
     let activity = 1;
     

@@ -9,7 +9,7 @@ module.exports = class extends Command {
         aliases: ["s", "sug","suggest"],
         description: `Suggest anything!`,
         category: 'Suggestions',
-        cooldown: 20,
+        cooldown: 0,
         botPermission: ["ADD_REACTIONS"]
       });
     }
@@ -17,10 +17,13 @@ module.exports = class extends Command {
     async run(message, args) {
 
       console.log(`Discord Suggestion Ran. From user ${message.author.tag}`)
+      const channelId = `${config.logChannelID}`; 
+      const logChannel = message.guild.channels.cache.get(channelId);
+
 
       let channel;
-      if(config.discord_channel_id){
-        channel = await message.guild.channels.cache.get(config.discord_channel_id)
+      if(config.suggestion_channel_id){
+        channel = await message.guild.channels.cache.get(config.suggestion_channel_id)
       } else channel = await message.guild.channels.cache.find(c => c.name == "suggestions" && c.type == "text");
 
       if(!channel){
@@ -37,12 +40,22 @@ module.exports = class extends Command {
       .setDescription(`**Submitter**\n ${message.author.tag} \n\n**Suggestion**\n ${suggestion}`)
       .setFooter(`Suggested by ${message.author.id}`)
       .setTimestamp()
+      .setColor(message.client.color.blue)
     
       channel.send(embed)
       .then((s)=>{
 
-      s.react('✅')
-      s.react('❌')
+      s.react(`✅`)
+      s.react(`❌`)
+
+      const log = new Discord.MessageEmbed()
+      .setThumbnail(message.author.avatarURL())
+      .setAuthor(`${message.author.tag}`)
+      .setDescription(`Suggestion sent by <@${message.author.id}> in <#${config.suggestion_channel_id}>\n ${suggestion}`)
+      .setFooter(`Author: ${message.author.id} | Message ID: ${message.id}`)
+      .setTimestamp()
+      .setColor(message.client.color.blue)
+      logChannel.send(log)
 
       })
       .catch(()=>{
@@ -54,6 +67,7 @@ module.exports = class extends Command {
       .then((s)=>{
         s.delete({timeout: 5000})
       })
+
 
 
       }
