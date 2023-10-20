@@ -14,10 +14,12 @@ Suggestion Bot
 
 # Create a config.json file
 
-Add in the config.json file as it shows in image below
+Add in the config.json file as it shows in image below  
 
-
-https://cdn.discordapp.com/attachments/1118868994078818385/1164759063406587905/image.png?ex=65446168&is=6531ec68&hm=c2974f3943db1b942dd91c4eb45473344f6114fb1c531924d2b2052f4f5e8874&
+<h1 align="center">
+<a href="https://github.com/john-fries-j"><img src="https://cdn.discordapp.com/attachments/1118868994078818385/1164759063406587905/image.png">
+</a>
+</h1>
 
   
 
