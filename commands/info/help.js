@@ -6,7 +6,7 @@ module.exports = class extends Command {
     constructor(...args) {
       super(...args, {
         name: 'help',
-        aliases: ["help", "menu"],
+        aliases: ["help", "menu","commands"],
         description: `Display\'s ${config.bot_name || 'Bot'}\'s Help Menu.`,
         category: 'Information',
         cooldown: 3,

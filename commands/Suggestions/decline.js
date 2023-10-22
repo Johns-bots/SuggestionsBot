@@ -73,12 +73,10 @@ module.exports = class extends Command {
         suggestionmessage.edit(newEmbed);
         message.delete();
      
-
       } else {
         logChannel.send(new Discord.MessageEmbed().setThumbnail(message.author.avatarURL()).setAuthor(`${message.author.tag}`).setDescription(`Attempted suggestion acception failed \n Link to suggestion: ${suggestionmessage.url}`).setFooter(`Author: ${message.author.id} | Message ID: ${message.id}`).setTimestamp().setColor(message.client.color.green))
        return message.channel.send(new Discord.MessageEmbed().setAuthor(`${message.author.tag}`, message.author.displayAvatarURL({ format: 'png' })).setDescription(`The following suggestion can't be accepted\n Contact <@630070645874622494> if this is not the case.`).setFooter(`${message.author.id}`).setTimestamp().setColor('RED'))
       }
           };
-          
           
         };      
