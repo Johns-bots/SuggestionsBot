@@ -7,7 +7,7 @@ module.exports = class extends Command {
       super(...args, {
         name: 'decline',
         aliases: ["decline", "declinesuggestion"],
-        description: `Decline a suggestion.`,
+        description: `Declines a suggestion. **Must be able to Manage Messages**`,
         category: 'Suggestions',
         cooldown: 3,
         userPermission: ['MANAGE_MESSAGES']

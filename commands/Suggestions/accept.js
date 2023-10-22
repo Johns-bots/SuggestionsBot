@@ -5,9 +5,9 @@ const Discord = require('discord.js');
 module.exports = class extends Command {
     constructor(...args) {
       super(...args, {
-        name: 'approve',
-        aliases: ["saccept", "acceptsuggestion", "approvesuggestion", "accept"],
-        description: `Accept a suggestion.`,
+        name: 'accept',
+        aliases: ["accept", "acceptsuggestion", "approvesuggestion",],
+        description: `Accepts a suggestion. **Must be able to Manage Messages**`,
         category: 'Suggestions',
         cooldown: 3,
         userPermission: ['MANAGE_MESSAGES']

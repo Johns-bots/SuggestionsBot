@@ -19,7 +19,7 @@ module.exports = class extends Command {
     
     const embed = new MessageEmbed()
     .setColor('GREEN')
-    .setTitle(`${config.bot_name || 'Bot'}'s Command List`)
+    .setTitle(`${config.bot_name} Command List`)
 
 
     const categories = message.client.utils.removeDuplicates(message.client.commands.filter(cmd => cmd.category !== 'Owner').map(cmd => cmd.category));
@@ -27,7 +27,7 @@ module.exports = class extends Command {
 
     for (const category of categories) {
       embed.addField(`**${category}**`, this.client.commands.filter(cmd => 
-        cmd.category === category).map(cmd => `\`${cmd.name}${" ".repeat(12 - Number(cmd.name.length))}:\` - ${cmd.description}`).join('\n'))
+        cmd.category === category).map(cmd => `\`${cmd.name}:\` - ${cmd.description}`).join('\n'))
     }
 
     message.channel.send(embed)

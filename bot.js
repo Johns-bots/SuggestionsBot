@@ -1,4 +1,4 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, DMChannel } = require("discord.js");
 const Util = require('./structures/Util');
 const config = require('./config.json');
 const token  = config.main_token
@@ -25,6 +25,7 @@ module.exports = class botClient extends Client {
         "GUILD_MESSAGES",
         "GUILD_EMOJIS",
         'GUILD_MESSAGE_REACTIONS',
+        'DIRECT_MESSAGES',
         ],
       },
     });
