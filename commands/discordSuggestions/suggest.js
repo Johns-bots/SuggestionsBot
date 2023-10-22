@@ -64,7 +64,6 @@ module.exports = class extends Command {
       
       message.delete();
       return message.channel.send(`${message.client.emoji.success} | Successfuly sent your suggestion to ${channel}`)
-
       }
 };
 

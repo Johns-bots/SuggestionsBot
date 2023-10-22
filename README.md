@@ -14,6 +14,7 @@ Suggestion Bot
 
 # Create a config.json file
 
+
 Add in the config.json file as it shows in image below  
 
 <h1 align="center">
@@ -21,7 +22,7 @@ Add in the config.json file as it shows in image below
 </a>
 </h1>
 
-  
+
 
 # Create .env file
 
@@ -36,5 +37,5 @@ test your commands
 any errors make a pull request.
 
 ## To-Do's
-Port to djs v14 with slash commands 
-Maybe add modals?
+Make bot Application Commands
+Add modals at some point.
