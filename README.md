@@ -39,3 +39,8 @@ any errors make a pull request.
 ## To-Do's
 Make bot Application Commands
 Add modals at some point.
+
+## Authors
+
+* **peterhanania** - *Developer* - [John Fries](https://github.com/peterhanania/) - *Created the original bot code ([Link to code](https://github.com/peterhanania/suggestion-bot)*
+* **John Fries** - *Developer* - [John Fries](https://github.com/John-Fries-J/) - *Updated to fix*
